@@ -27,7 +27,7 @@ pub fn encode(pixels:&mut Vec<u8>, data: &str, channel:&mut u8) -> Result<Vec<u8
     Ok(pixels.to_vec())
 }
 ///check image capacity 
- fn is_large(arr_len: usize, bin_len: usize) -> bool {
+fn is_large(arr_len: usize, bin_len: usize) -> bool {
     bin_len > (arr_len * 8) / 4
 }
 ///reverse the lsb replacement 
