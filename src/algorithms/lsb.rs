@@ -1,8 +1,4 @@
-pub struct LSB {
-    
-}
 
-impl LSB{
 ///perform lsb replacement 
   pub fn encode(pixels:&mut Vec<u8>, data: &str, channel:&mut u8) -> Result<Vec<u8>,&'static str>{
     let mut tracker = 0;
@@ -49,5 +45,4 @@ pub fn decode(pixels: Vec<u8>, channel: &mut u8) -> Result<String, &'static str>
     }
 
     Ok(binary_string)
-}
 }
