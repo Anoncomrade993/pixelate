@@ -1,6 +1,6 @@
 ///perform lsb replacement 
 pub mod lsb{
-  pub fn encode(pixels:&mut Vec<u8>, data: &str, channel:usize) -> Result<Vec<u8>,&'static str>{
+  pub fn encode(pixels:&mut Vec<u8>, data: &str, channel:&mut u8) -> Result<Vec<u8>,&'static str>{
       let mut tracker = 0;
       let data_len = data.len();
   
@@ -32,7 +32,7 @@ pub mod lsb{
       bin_len > (arr_len * 8) / 4
   }
   ///reverse the lsb replacement 
-  pub fn decode(pixels: Vec<u8>, channel:usize) -> Result<String, &'static str> {
+  pub fn decode(pixels: Vec<u8>, channel:&mut u8) -> Result<String, &'static str> {
       let mut binary_string = String::new();
   
       if pixels.is_empty() {
@@ -40,7 +40,7 @@ pub mod lsb{
       }
   
       for q in (0..pixels.len()).step_by(4) {
-          let lsb = pixels[q + *channel] & 1;
+          let lsb = pixels[q + *channel as usize] & 1;
           binary_string.push_str(&lsb.to_string());
       }
   
