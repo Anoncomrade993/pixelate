@@ -1,6 +1,5 @@
-
 ///perform lsb replacement 
-  pub fn encode(pixels:&mut Vec<u8>, data: &str, channel:&mut u8) -> Result<Vec<u8>,&'static str>{
+pub fn encode(pixels:&mut Vec<u8>, data: &str, channel:&mut u8) -> Result<Vec<u8>,&'static str>{
     let mut tracker = 0;
     let data_len = data.len();
 
