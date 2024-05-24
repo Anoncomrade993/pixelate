@@ -1,2 +1,2 @@
-pub mod algorithms;
+pub mod algorithms::lsb;
 //use algorithms::lsb::LSB;
