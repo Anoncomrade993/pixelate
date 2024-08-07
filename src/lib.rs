@@ -49,3 +49,4 @@ pub mod lsb {
         Ok(binary_string)
     }
 }
+
