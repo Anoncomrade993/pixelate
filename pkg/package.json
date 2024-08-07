@@ -1,0 +1,14 @@
+{
+  "name": "pixelate",
+  "collaborators": [
+    "Destiny Ifeanyi<destinyifeanyi001@gmail.com>"
+  ],
+  "version": "0.0.1",
+  "files": [
+    "pixelate_bg.wasm",
+    "pixelate.js",
+    "pixelate.d.ts"
+  ],
+  "main": "pixelate.js",
+  "types": "pixelate.d.ts"
+}

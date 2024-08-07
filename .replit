@@ -1,7 +1,8 @@
 run = "cargo run"
+modules = ["rust-stable", "nix"]
 
 [nix]
-channel = "stable-23_11"
+channel = "stable-24_05"
 
 [deployment]
 run = ["sh", "-c", "cargo run"]
